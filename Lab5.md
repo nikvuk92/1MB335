@@ -59,7 +59,7 @@ Hint: you can use `nano` to modify files in the command line.
 
 **Question 1. To which species do the different sequences belong?** 
 
-**Question 2. There one sequence that should stand out from the others. Write down the name of the corresponding fasta file, the species name, and the type of sequence. How did you identify it?**
+**Question 2. There is one sequence that should clearly stand out from the others. Write down the name of the corresponding fasta file, the species name, and the type of sequence. How did you identify it?**
 
 How much do you know about the species that are in the dataset? Do you know how they are related? To start to answer these questions, [Wikipedia](https://en.wikipedia.org/) and the [taxonomy browser](https://www.ncbi.nlm.nih.gov/Taxonomy/Browser/wwwtax.cgi?mode=Root) (yet another NCBI tool!) are very helpful.
 
@@ -124,9 +124,13 @@ Nowadays there is an abundance of genomic data available, for organelles and ent
 
 The large mitochondrial ribosomal RNA (l-rRNA) which is part of the large subunit of the ribosome (in the mitochondria) is - and has been - used a lot in phylogenetic inferences, as it is one of the most conserved genes. Depending on the species you are working with, this RNA might have different names, for example, 16S, rnl, l-RNA, 21S, etc.
 
-For this step, we will focus on the multicellular eukaryotic organisms ('Metazoans') in our dataset. [Here](example_data/session5/Ribosomal_large_subunit)  you will find seven fasta files, corresponding to the sequence of interest for seven of the species from the previous step. Start by finding the corresponding sequence for three extra species: Seq8, Seq9, and Seq14 (go to NCBI, find the annotated mitochondria, and look for rRNA; be careful, there are two rRNA per mitochondrial genome! Choose the larger one). We will not use the other genomes for this and the following step.
+For this step, we will focus on the multicellular eukaryotic organisms ('Metazoans') in our dataset. 
 
-Then, prepare the alignment input in the same way as in Step 2c: create a fasta file with the **10** sequences and change the headers to short ones, **remember to modify the part of the short header about the type of sequence**. Now, proceed to the alignment with `mafft`. You can take the same command as the one you created when aligning for the entire genome.
+- [Here](example_data/session5/Ribosomal_large_subunit) you will find seven fasta files, corresponding to the sequence of interest for seven of the species from the previous step. 
+- Let's find the corresponding sequence for three more species: Seq8, Seq9, and Seq14 (go to NCBI, find the annotated mitochondria, and look for **rRNA**; be careful, there are two rRNA per mitochondrial genome! Choose the **larger** one). 
+- We will not use the other genomes for this and the following step.
+- Then, prepare the alignment input in the same way as in Step 2c: create a fasta file with the **10** sequences and change the headers to short ones, **remember to modify the part of the short header about the type of sequence**. 
+- Now, proceed to the alignment with `mafft`. You can take the same command as the one you created when aligning for the mitochondrial entire genome.
 
 Once it has finished, look at the output file (the .clustal). Do you understand the format?
 
