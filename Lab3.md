@@ -144,26 +144,28 @@ Second, create a single fasta file with the different contigs fasta files. You c
 
 ### Tiling
 
+We are going to skip this step for today's exercize. But definitely read through it and try to understand the basic framework of why it is done.
+
 You now need to connect the different contigs in your file to create a continuous circular sequence. This is the step called 'tiling'. Your contigs may come from different strands (+ or -). You won't be able to connect a contig from the + strand to a contig from the - strand. Thus the first step of the tiling is to obtain the reverse-complement for each of your contigs. You can do that by visiting this [webpage](https://www.bioinformatics.org/sms/rev_comp.html). Alternatively, you can use the script that you wrote during session 2 (Question 3).
 
 If you use the web tool: Paste your contig sequence into the search box and reverse-complement it. Now add that new sequence to your fasta file (do not forget to add an informative header!). Repeat for each of your contigs.
 
 ## Part 2 - working on your study species
 
+This is the step when you start to work with one of the four species that you were assigned at the beginning of the class (see Table 1 below, left column). If you forgot which species you were supposed to work with, check under groups in Studium.
 
-This is the step when you start to work with one of the four species that you were assigned at the beginning of the class (see Table 1 below, left column). If you forgot which species you were supposed to work with,check under groups in Studium.
+Again, as this is part of the tiling step, you are not required to do any of it, but instead try to grasp the steps below and how they would look like if we were doing tiling. Just by reading and opening the links should be enough for you need to answer the questions 8 - 10. (You go back to the actual work after question 10). 
 
 For this exercise, you can imagine that you are the first researcher working with the mitochondria of a newly sequenced organism. Your task is to figure out where all the important protein-coding genes, tRNAs, and rRNAs. Since this is the first time someone is working with this species there is nothing known but you can use a closely related species that is already sequences as a reference to fill in the blanks. 
 
-
-You are ready to connect the different contigs! For that, you will use another resource: short reads data from an individual of your species of interest. Indeed, there may be gaps between the contigs that you have now. To get a continuous molecule, you need to fill these gaps. This is schematized in Figure 1.
+You are ready to connect the different contigs! For that, you would use another resource: short reads data from an individual of your species of interest. Indeed, there may be gaps between the contigs that you have now. To get a continuous molecule, you need to fill these gaps. This is schematized in Figure 1.
 
 ![](Figures/Figure_Tiling_Pogodaetal.png)
 
 
 ***Figure 3: An illustration of tiling.** Let’s say you have three assembled contigs that you have identified as mitochondrial: Node 12, Node 26, and Node 83 (black lines). You will use reads from the .fastq file (purple lines) to bridge the gap between these three contigs. The blue lines are the sequence that you identified and used to attach the respective contigs to each other for a complete, but not yet circularized mitochondrial genome. Taken from Pogoda et al. A guide to organellar genome assembly and annotation.*
 
-Your task now is to select a library of short reads for an individual of your species of interest. A good place to find that is NCBI. So, open the start page of NCBI again. In the 'All Databases' drop-down menu, choose 'SRA'. 'SRA' is short for Sequence Read Archive.
+Your task now would be to select a library of short reads for an individual of your species of interest. A good place to find that is NCBI. So, open the start page of NCBI again. In the 'All Databases' drop-down menu, choose 'SRA'. 'SRA' is short for Sequence Read Archive.
 
 **Question 8.** Search for your species of interest. How many results do you get?
 
@@ -174,10 +176,11 @@ Most likely your first search resulted in a lot of results. This is expected as 
 As you might have noticed, there is a bit of everything in the results. To make it easier for you, we already selected a library of short reads for your species,
 where we actually only have the files for C remanei, but you can use that one no matter which study species you had. You will find it in [FigShare](https://figshare.com/s/eff75c8523b84fa7f94f). 
 
-**Question 10.** What is the format of the file? Do you understand what the different lines are? How long are the reads? 
+**Question 10.** Without downloading the file, can you tell what the format of the file is? Do you understand what the different lines are? How long are the reads? You should be able to answer these questions by just looking at the files.
 
 Nowadays doing tiling has become less and less common as long read sequencing has becom more common place. If your read are longer than the mitochodria you are sequencing it's quite easy thing to assemble it!
 
+### You start working again from this point!
 In the real world you would have now to start going through this procces of tiling and circularizing your mitochondrial seqeuences, but the interest of time we have, as any good cooking show, prepared this step in advance.
 You can find the prepared mitochondrial fasta files [here](example_data/mitochondrial_genomes/)
 
@@ -205,7 +208,7 @@ Go to your new favorite webpage (i.e. NCBI ;) ). We will detail one way to find 
 In 'All Databases' choose 'Genome' and then under 'Custom resources' choose 'Organelles'. On the new start page, under 'Using organelles resources', choose 'Browse by organism'. Write the name of the species in the search bar then pick the genome with the **oldest** release date for the species (close relative)!
 
 **Question 12.** What is the size ***in basepairs*** of the mitochondrial genome for the ***'close relative' species***? 
-What is the identifier of the sequence? (there might be several identifiers)
+What is the identifier of the sequence? This is a unique 'codename' (usually a combination of numbers and letters), given to the sequence when it was uploaded to the database, in this case NCBI. It is a way for researchers to access that specific sequence and to know it is the correct one. There might be several identifiers and by clicking on them you are transferred to pages like the one below.
 
 Then click on the identifier. You should be taken to a page that looks like that [one](https://www.ncbi.nlm.nih.gov/nuccore/NC_002008.4), except for your close relative. If that is not the case, try again or ask the teaching assistants. This page comprises a lot of information, including annotations. You want the sequence of the *cox 1* gene. Search for it on the page (you might have to change case, e.g. COX1, or search for COI). You should get two matches, one for the gene and one for the coding sequence (CDS). Look at the information, in particular which translation table is used, and other details (particularly important for those of you working with the nematodes and the flies). Click on the CDS link and open it in a new window. You should have something similar to the entire mitochondria but very reduced in length. To download the fasta file, click on 'FASTA' (under the name of the sequence). Once the page changed, click on 'Send to' in the top right of the page, make sure to choose 'Complete Record', and select 'File' as file destination. The format should be FASTA. This will open a text file with the sequence - save it in an appropriate location with an appropriate name.
 
