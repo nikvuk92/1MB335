@@ -202,9 +202,10 @@ Pongo abelii (orangutan) | Homo sapiens
 
 Go to your new favorite webpage (i.e. NCBI ;) ). We will detail one way to find the mitochondrial genome of the close relative. There are more ways, feel free to explore!
 
-In 'All Databases' choose 'Genome' and then under 'Custom resources' choose 'Organelles'. On the new start page, under 'Using organelles resources', choose 'Browse by organism'. Write the name of the species in the search bar then pick the genome with the **oldest** release date for the species!
+In 'All Databases' choose 'Genome' and then under 'Custom resources' choose 'Organelles'. On the new start page, under 'Using organelles resources', choose 'Browse by organism'. Write the name of the species in the search bar then pick the genome with the **oldest** release date for the species (close relative)!
 
-**Question 12.** What is the size of the mitochondrial genome? What is the identifier of the sequence? (there might be several identifiers)
+**Question 12.** What is the size ***in basepairs*** of the mitochondrial genome for the ***'close relative' species***? 
+What is the identifier of the sequence? (there might be several identifiers)
 
 Then click on the identifier. You should be taken to a page that looks like that [one](https://www.ncbi.nlm.nih.gov/nuccore/NC_002008.4), except for your close relative. If that is not the case, try again or ask the teaching assistants. This page comprises a lot of information, including annotations. You want the sequence of the *cox 1* gene. Search for it on the page (you might have to change case, e.g. COX1, or search for COI). You should get two matches, one for the gene and one for the coding sequence (CDS). Look at the information, in particular which translation table is used, and other details (particularly important for those of you working with the nematodes and the flies). Click on the CDS link and open it in a new window. You should have something similar to the entire mitochondria but very reduced in length. To download the fasta file, click on 'FASTA' (under the name of the sequence). Once the page changed, click on 'Send to' in the top right of the page, make sure to choose 'Complete Record', and select 'File' as file destination. The format should be FASTA. This will open a text file with the sequence - save it in an appropriate location with an appropriate name.
 
@@ -232,7 +233,7 @@ If you cannot find the start codon, perform the step above with the first positi
 
 You now have a *cox1* oriented genome!
 
-**Question 14.** What is the position (in base pairs) of the first nucleotide of the start codon in your study species? (before you oriented it) You can validate your answer by finding it on NCBI on the page of the mitochondria of your study species.
+**Question 14.** What is the position (in base pairs) of the first nucleotide of the start codon in your ***study species***? (before you oriented it) You can validate your answer by finding it on NCBI on the page of the mitochondria of your study species.
 
 ---
 ## Report:
