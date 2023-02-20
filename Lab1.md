@@ -267,6 +267,8 @@ With that information, you can probably see why it's a generally good idea to st
 
 ##### The `.bam` file is just for a small part of the genome, which one? 
 **Question 4:** use `samtools view` and `head` and `tail` to **figure out the first and last basepair position in the file**. Also include the exact command you used!
+OBS! When writing the basepair position it important to remember that the position is relative to the Chromosome you are looking at. 
+So, make sure to write down the Chromosome number as well.
  
 
 ##### Use `cut` to extract only the name and nucleotide sequence from the `.bam` file. 
